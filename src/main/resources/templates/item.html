@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{component/common/layout}"
+      lang="ja">
+<head>
+  <meta charset="UTF-8" th:remove="tag">
+  <title>OpenFeign-商品検索画面</title>
+</head>
+<body>
+<!-- コンテンツの表示 -->
+<main layout:fragment="content">
+  <th:block th:replace="~{component/item/search :: search}"></th:block>
+  <th:block th:replace="~{component/item/result :: result}"></th:block>
+  <script defer th:src="@{/js/item/table.js}"></script>
+</main>
+</body>
+</html>

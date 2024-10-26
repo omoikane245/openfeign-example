@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenFeign-Example</title>
+</head>
+<body>
+<!-- エラーメッセージ -->
+<div th:fragment="error">
+  <div class="text-center">
+    <div class="text-muted">ページを表示できません</div>
+    <a th:href="@{/}">&larr; ホームに戻る</a>
+  </div>
+</div>
+</body>
+</html>

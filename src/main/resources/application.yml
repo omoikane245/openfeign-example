@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: OpenFeign-Example
+  main:
+    banner-mode: off
+    log-startup-info: false
+  messages:
+    basename: messages
+    encoding: UTF-8
+    fallback-to-system-locale: false
+
+server:
+  tomcat:
+    max-threads: ${TOMCAT_MAX_THREADS:200}
+    min-spare-threads: ${TOMCAT_MIN_THREADS:20}
+  shutdown: graceful
+  port: ${PORT:5000}
+
+dmm-api:
+  url: https://api.dmm.com/affiliate/v3
+  api-id: ${DMM_API_ID}
+  affiliate-id: ${DMM_API_AFFILIATE_ID}
+  retry-max-count: ${DMM_API_RETRY_MAX_COUNT:5}
+  retry-period: ${DMM_API_RETRY_PERIOD:100}
+  retry-duration: ${DMM_API_RETRY_DURATION:1000}
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}

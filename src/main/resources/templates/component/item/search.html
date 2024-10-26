@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenFeign-Example</title>
+</head>
+<body>
+<div th:fragment="search">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg">
+          <div class="card-header bg-primary text-white text-center">
+            <h2 class="card-title">商品検索</h2>
+          </div>
+          <div class="card-body">
+            <form th:action="@{/search}" th:object="${itemForm}" method="post">
+              <div class="form-group">
+                <label>キーワード <span class="badge badge-danger">必須</span></label>
+                <input type="text" class="form-control" placeholder="キーワードを入力" th:errorclass="border-danger"
+                       th:field="*{keyword}" th:classappend="${#fields.hasErrors('keyword')} ? 'border-danger'">
+                <div class="text-danger" th:if="${#fields.hasErrors('keyword')}" th:errors="*{keyword}"></div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">検索</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

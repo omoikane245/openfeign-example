@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keyword" content="OpenFeign">
+  <meta name="description" content="OpenFeign">
+  <title>OpenFeign-Example</title>
+  <script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+  <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- ヘッダーの表示 -->
+  <th:block layout:fragment="header" th:replace="~{component/common/header :: header}"></th:block>
+  <!-- メインの表示 -->
+  <th:block layout:fragment="content"></th:block>
+  <!-- フッターの表示 -->
+  <th:block layout:fragment="footer" th:replace="~{component/common/footer :: footer}"></th:block>
+</body>
+</html>

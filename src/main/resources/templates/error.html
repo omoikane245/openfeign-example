@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{component/common/layout}"
+      lang="ja">
+<head>
+  <meta charset="UTF-8" th:remove="tag">
+  <title>OpenFeign-Example</title>
+</head>
+<body>
+<!-- コンテンツの表示 -->
+<main layout:fragment="content" class="offcanvas-outside bg-light vh-100">
+  <div class="container-fluid">
+    <div class="row mh-100 align-items-center justify-content-center">
+      <!-- エラーメッセージ -->
+      <div th:replace="~{component/common/message :: error}"></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
